@@ -6,7 +6,7 @@ class Node:
 class SLinkedList:
     def __init__(self):
         self.head =None
-
+###____ FOR CREATING THE NODES ____###
     def create(self, number):
         pointer = Node(input("Enter Data: "))
         self.head = pointer
@@ -14,14 +14,14 @@ class SLinkedList:
             pointer.next=Node(input("Enter Data: "))
             pointer = pointer.next
             number-=1
-
+###____ TO DISPLAY THE NODES ____###
     def display(self):
         pointer = self.head
         while pointer is not None:
             print(pointer.data)
             pointer = pointer.next
         print()
-
+###____ FOR COUNTING THE NO OF NODES ____###
     def count(self):
         pointer = self.head
         count = 0
@@ -29,12 +29,12 @@ class SLinkedList:
             count +=1
             pointer = pointer.next
         return count
-
+###____ FOR INSERTING AT BEGIN ____###
     def AtBegin(self, data):
         temp=Node(data)
         temp.next=self.head
         self.head=temp
-
+###____ FOR INSERTING AT LAST ____###
     def AtLast(self, data):
         pointer = self.head
         temp=Node(data)
@@ -44,7 +44,7 @@ class SLinkedList:
         while pointer.next is not None:
             pointer = pointer.next
         pointer.next=temp
-
+###____ FOR INSERTING IN BETWEEN ____###
     def InBetween(self, position, data):
         temp = Node(data)
         pointer=self.head
@@ -57,6 +57,7 @@ class SLinkedList:
                 pointer=pointer.next
             temp.next=pointer.next
             pointer.next=temp
+###____ FOR REMOVING NODE ____###
     def RemoveNode(self, key):
         pointer = self.head
 
